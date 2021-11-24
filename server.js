@@ -1,7 +1,9 @@
 const mongoose = require("mongoose")
 const Document = require("./Document")
-
-mongoose.connect("mongodb://localhost/google-docs-clone", () => {
+require('dotenv').config()
+const mongourl = process.env.MONGOURI;
+// const mongourl = "mongodb://localhost/google-docs-clone";
+mongoose.connect(mongourl, () => {
     console.log("connected to database");
 })
 
