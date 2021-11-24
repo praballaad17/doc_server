@@ -9,7 +9,7 @@ mongoose.connect(mongourl, () => {
 const port = process.env.PORT || 3001;
 const io = require("socket.io")(port, {
     cors: {
-        origin: "http://localhost:3000",
+	origin: ["https://thedocs.netlify.app/","http://localhost:3000",]
         methods: ["GET", "POST"],
     },
 })
